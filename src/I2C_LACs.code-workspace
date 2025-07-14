@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../I2C_LACs"
+		},
+		{
+			"name": "I2C_LAC",
+			"path": "../../I2C_LAC"
+		},
+		{
+			"name": "CAN Test",
+			"path": "../../CAN Test"
+		},
+		{
+			"name": "CAN_LACs",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
