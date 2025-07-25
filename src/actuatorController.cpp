@@ -2,7 +2,7 @@
 #include <Arduino.h>
 
 // Define Error Tolerance
-#define errorTolerance 2.0f // 0.25mm Tolerance for Position Control
+#define errorTolerance 0.1f // 0.25mm Tolerance for Position Control
 
 // Define Maximum Position and Minimum Position
 #define maxPosition 200.0f // Maximum Position in mm (Adjust if Stroke Length is Different)

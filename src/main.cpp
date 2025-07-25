@@ -8,7 +8,7 @@
 // 2: Controls Leg Lengths 2 (on left) and 3 (on right)
 // 3: Controls Leg Lengths 4 (on left) and 5 (on right)
 // NOTE: THIS MUST BE UPDATED FOR EACH MICROCONTROLLER
-#define MICROCONTROLLER_ID 2
+#define MICROCONTROLLER_ID 3
 
 // Chip select pin
 const int SPI_CS_PIN = 7;
@@ -36,18 +36,12 @@ ActuatorController rightActuatorController(RPotPin, RILI, RELI);
 float legLengths[6] = {0};  // leg 1 to leg 6
 
 void setup() {
-  Serial.begin(115200);
-  while (!Serial) {}
-
   if (CAN.begin(MCP_ANY, CAN_500KBPS, MCP_8MHZ) == CAN_OK) {
-    Serial.println("CAN init OK");
   } else {
-    Serial.println("CAN init FAILED");
     while (1);
   }
 
   CAN.setMode(MCP_NORMAL); // Normal mode
-  Serial.println("CAN set to normal mode");
 
   // Set the Command Output Pins
 
