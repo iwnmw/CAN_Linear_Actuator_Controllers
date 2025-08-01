@@ -44,9 +44,9 @@ float ActuatorController::readPosition() {
 // Define the Update Function to Constantly Update the Controller with New Feedback
 void ActuatorController::update() {
     float currentPosition = readPosition();
-    if (currentPosition < targetPosition - errorTolerance) { // If Current Position is 5mm Below Target
+    if (currentPosition < targetPosition - errorTolerance and currentPosition < maxPosition-0.5) { // If Current Position is 5mm Below Target
         extend();
-    } else if (currentPosition > targetPosition + errorTolerance) { // If Current Position is 5mm Above Target
+    } else if (currentPosition > targetPosition + errorTolerance and currentPosition > minPosition ) { // If Current Position is 5mm Above Target
         retract();
     } else {
         stop(); // If Within 5mm of Target, Stop

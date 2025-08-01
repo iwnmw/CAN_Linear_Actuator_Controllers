@@ -8,7 +8,7 @@
 // 2: Controls Leg Lengths 2 (on left) and 3 (on right)
 // 3: Controls Leg Lengths 4 (on left) and 5 (on right)
 // NOTE: THIS MUST BE UPDATED FOR EACH MICROCONTROLLER
-#define MICROCONTROLLER_ID 3
+#define MICROCONTROLLER_ID 1
 
 // Chip select pin
 const int SPI_CS_PIN = 7;
